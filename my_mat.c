@@ -4,7 +4,7 @@
 
 #define rows 10
 #define cols 10
-#define max 99999999
+#define max 999999999
 
 
 void initArr(int arr[][cols]){
