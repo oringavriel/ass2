@@ -37,20 +37,17 @@ void isPath(int arr[][cols])
              if (arr[i][z] + arr[z][j] < arr[i][j]){
 
                     arr[i][j] = arr[i][z] + arr[z][j];
-
              }
-
-        }
-
+            }
          }
-
         }
     }
+
     int t;
     int t1;
     scanf("%d",&t);
     scanf("%d",&t1);
-    if(arr[t][t1]!=0 && t>-1&& t1>-1&& t1<cols &&t<rows){
+    if(arr[t][t1]!=0 && arr[t][t1]!=max &&  t>-1&& t1>-1&& t1<cols &&t<rows){
         printf("True\n");
     }
     else{
@@ -83,7 +80,7 @@ int t;
     int t1;
     scanf("%d",&t);
     scanf("%d",&t1);
-    if(arr[t][t1]==0 || t<0 || t1<0 || t1>cols || t>rows){
+    if(arr[t][t1]==0 || arr[t][t1]==max || t<0 || t1<0 || t1>cols || t>rows){
         printf("-1\n");}
         else{
             printf("%d\n",arr[t][t1]);
