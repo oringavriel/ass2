@@ -33,6 +33,7 @@ void isPath(int arr[][cols])
     for (z=0; z<rows;z++) {
       for (i=0;i<rows;i++) {
          for (j=0;j<cols;j++) {
+            if(arr[i][j]!=0 && arr[i][z]!=0 && arr[z][j]!=0 ){
              if (arr[i][z] + arr[z][j] < arr[i][j]){
 
                     arr[i][j] = arr[i][z] + arr[z][j];
@@ -44,6 +45,7 @@ void isPath(int arr[][cols])
          }
 
         }
+    }
     int t;
     int t1;
     scanf("%d",&t);
@@ -63,6 +65,7 @@ void shortestPath(int arr[][cols])
     for (z=0; z<rows;z++) {
       for (i=0;i<rows;i++) {
          for (j=0;j<cols;j++) {
+            if(arr[i][j]!=0 && arr[i][z]!=0 && arr[z][j]!=0){
              if (arr[i][z] + arr[z][j] < arr[i][j]){
 
                     arr[i][j] = arr[i][z] + arr[z][j];
@@ -74,6 +77,7 @@ void shortestPath(int arr[][cols])
          }
 
         }
+    }
 
 int t;
     int t1;
