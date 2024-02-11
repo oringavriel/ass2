@@ -49,10 +49,10 @@ void isPath(int arr[][cols])
     scanf("%d",&t);
     scanf("%d",&t1);
     if(arr[t][t1]!=0 && t>-1&& t1>-1&& t1<cols &&t<rows){
-        printf("True");
+        printf("True\n");
     }
     else{
-          printf("False");
+          printf("False\n");
     }
 
 }
@@ -80,9 +80,9 @@ int t;
     scanf("%d",&t);
     scanf("%d",&t1);
     if(arr[t][t1]==0 || t<0 || t1<0 || t1>cols || t>rows){
-        printf("-1");}
+        printf("-1\n");}
         else{
-            printf("%d",arr[t][t1]);
+            printf("%d\n",arr[t][t1]);
         }
 
     }
