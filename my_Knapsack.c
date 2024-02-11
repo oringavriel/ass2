@@ -81,13 +81,13 @@ int main() {
    
     printf("Maximum profit: %d\n", maxProfit);
    
-    printf("Selected items: ");
+    printf("Selected items:");
     for ( i = 0; i < arrayLen; i++) {
         if (selectedItems[i]) {
-            printf("%s ", items[i].name);
+            printf(" %s", items[i].name);
         }
     }
-    printf("\n");
+    
 
     return 0;
 }
