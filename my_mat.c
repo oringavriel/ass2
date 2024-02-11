@@ -4,6 +4,7 @@
 
 #define rows 10
 #define cols 10
+#define max 99999999
 
 
 void initArr(int arr[][cols]){
@@ -11,7 +12,14 @@ void initArr(int arr[][cols]){
     int i, j;
     for(i=0;i<rows;i++){
         for(j=0;j<cols;j++){
-         scanf( "%d", &arr[i][j]);
+              int t;
+         scanf( "%d", &t);
+         if(t==0 && i!=j){
+             arr[i][j]=max;
+         }
+         else{
+             arr[i][j]=t;
+         }
         }
     }
 
@@ -40,7 +48,7 @@ void isPath(int arr[][cols])
     int t1;
     scanf("%d",&t);
     scanf("%d",&t1);
-    if(arr[t][t1]!=0 && t>-1&& t1>-1&& t1<=cols &&t<=rows){
+    if(arr[t][t1]!=0 && t>-1&& t1>-1&& t1<cols &&t<rows){
         printf("True");
     }
     else{
